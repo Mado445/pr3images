@@ -4,6 +4,10 @@ pipeline{
         label "jenkins-agent"
     }
 
+    tools{
+        sonarQubeScanner "sonar-scanner"
+
+    }
     stages{
 
         stage("Clean workspace as a fresh"){
