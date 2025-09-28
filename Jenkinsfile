@@ -20,9 +20,8 @@ pipeline{
 
         stage("checkout for SCM"){
             steps{
-                script(
+                
                     git branch: "main", credentialsId: "git-pr3-token" , url: "https://github.com/Mado445/pr3images"
-                )
             }
 
         }
