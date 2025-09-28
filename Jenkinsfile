@@ -25,7 +25,9 @@ pipeline{
         stage("Sonar analysis"){
             steps{
                 script{
-                    def scannerHome = tool name: 'sonar-scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+                    
+                    def scannerHome = tool 'sonar-scanner'
+                    echo "Scanner home = ${scannerHome}"
                     withSonarQubeEnv(credentialsId: "jenkiins-sonarqube-token"){
                         sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=pr3 -Dsonar.sources=."
                     }
