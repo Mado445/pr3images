@@ -4,10 +4,6 @@ pipeline{
         label "jenkins-agent"
     }
 
-    tools{
-
-    }
-
     stages{
 
         stage("Clean workspace as a fresh"){
