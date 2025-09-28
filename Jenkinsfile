@@ -30,7 +30,7 @@ pipeline{
         stage("Sonar analysis"){
             steps{
                 script{
-                    withSonarWubeEnv(credentialsId: "jenkiins-sonarqube-token"){
+                    withSonarQubeEnv(credentialsId: "jenkiins-sonarqube-token"){
                         sh "sonar-scanner -Dsonar.projectKey=pr3 -Dsonar.sources=."
                     }
                 }
@@ -41,7 +41,7 @@ pipeline{
         stage ("Sonar Quality report "){
             steps{
                 script{
-                    waitForQualityGate abortPipiline: false, credentialsId: 'jenkiins-sonarqube-token'
+                    waitForQualityGate abortPipline: false, credentialsId: 'jenkiins-sonarqube-token'
                 }
             }
         }
