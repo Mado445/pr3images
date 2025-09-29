@@ -8,8 +8,8 @@ pipeline{
         DOCKER_PASS="dockerhub"
         RELEASE_GEN="1.0.0"
         RELEASE_ECHO="1.0.0"
-        ECHO_IMAGE="${DOCKER_USER}+"/"+"pr3echojenkins""
-        GEN_IMAGE="${DOCKER_USER}+"/"+"pr3genjenkins""
+        ECHO_IMAGE="${DOCKER_USER}"+"/"+"pr3echojenkins"
+        GEN_IMAGE="${DOCKER_USER}"+"/"+"pr3genjenkins"
 
     }
 
