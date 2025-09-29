@@ -4,7 +4,7 @@ pipeline{
         label "jenkins-agent"
     }
     environment{
-        DOCKER_USER="mado445"
+        DOCKER_USER="mado445555"
         DOCKER_PASS="dockerhub"
         RELEASE_GEN="1.0.0"
         RELEASE_ECHO="1.0.0"
